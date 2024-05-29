@@ -1,4 +1,8 @@
 const sumAll = function(smaller, bigger) {
+    if (smaller < 0 || bigger < 0 || !Number.isInteger(smaller) || !Number.isInteger(bigger))
+        {
+            return "ERROR"
+        }
     let newSum = 0;
     if (bigger < smaller)
         {
@@ -11,8 +15,6 @@ const sumAll = function(smaller, bigger) {
         }
     return newSum;
 };
-
-console.log(sumAll(4, 1));
 
 // Do not edit below this line
 module.exports = sumAll;
